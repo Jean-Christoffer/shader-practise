@@ -3,6 +3,9 @@ import * as THREE from "three";
 import vertex1 from "./shader1/vertex.glsl";
 import frag1 from "./shader1/fragment.glsl";
 
+import vertex2 from "./shader2/vertex.glsl";
+import frag2 from "./shader2/fragment.glsl";
+
 export const shaders = [
   {
     geometry: new THREE.PlaneGeometry(1, 1, 32, 32),
@@ -21,8 +24,8 @@ export const shaders = [
   {
     geometry: new THREE.PlaneGeometry(1, 1, 32, 32),
     material: new THREE.ShaderMaterial({
-      vertexShader: vertex1,
-      fragmentShader: frag1,
+      vertexShader: vertex2,
+      fragmentShader: frag2,
       side: THREE.DoubleSide,
       uniforms: {
         u_time: { value: 0 },
